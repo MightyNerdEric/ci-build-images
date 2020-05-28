@@ -5,6 +5,7 @@ ENV LC_ALL=en_US.utf-8 \
   LANG=en_US.utf-8
 
 RUN dnf install -y git python3 python3-devel make automake gcc kernel-devel sudo
+RUN ln -s /usr/bin/python3 /usr/bin/python
 RUN dnf install -y https://github.com/MightyNerdEric/sigul/releases/download/0.209/sigul-0.209-1.fc32.x86_64.rpm
 
 RUN curl "https://bootstrap.pypa.io/get-pip.py" -o get-pip.py \
